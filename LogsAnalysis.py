@@ -31,7 +31,6 @@ class LogsAnalysis():
             SELECT authors.name, SUM(clicks)
             FROM authors JOIN clicks
             ON authors.id = clicks.author
-            WHERE authors.name != 'Anonymous Contributor'
             GROUP BY authors.name
             ORDER BY SUM(clicks) DESC
             LIMIT 3;
